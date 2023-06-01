@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/users_view"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.freedidapp.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/search"
+        android:name="com.example.freedidapp.Search"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/shopping"
+        android:name="com.example.freedidapp.Shopping"
+        android:label="fragment_shopping"
+        tools:layout="@layout/fragment_shopping" />
+    <fragment
+        android:id="@+id/notification"
+        android:name="com.example.freedidapp.Notification"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/shield"
+        android:name="com.example.freedidapp.Shield"
+        android:label="fragment_shield"
+        tools:layout="@layout/fragment_shield" >
+        <action
+            android:id="@+id/action_shield_to_users"
+            app:destination="@id/users"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/shield"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/users"
+        android:name="com.example.freedidapp.Users"
+        android:label="fragment_users"
+        tools:layout="@layout/fragment_users" >
+        <action
+            android:id="@+id/action_users_to_catalog"
+            app:destination="@id/catalog"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_users_to_settings"
+            app:destination="@id/settings" />
+    </fragment>
+    <dialog
+        android:id="@+id/catalog"
+        android:name="com.example.freedidapp.Catalog"
+        android:label="fragment_catalog"
+        tools:layout="@layout/fragment_catalog" >
+        <action
+            android:id="@+id/action_catalog_to_users"
+            app:destination="@id/users"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </dialog>
+    <fragment
+        android:id="@+id/message2"
+        android:name="com.example.freedidapp.Message"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" />
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.example.freedidapp.Settings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>
