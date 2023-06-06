@@ -66,31 +66,6 @@
             </com.google.android.material.textfield.TextInputLayout>
 
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/email"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="22dp"
-                android:layout_marginTop="22dp"
-                app:errorEnabled="true"
-                app:errorTextColor="@color/register"
-                app:hintAnimationEnabled="false"
-                app:hintEnabled="false"
-                app:layout_constraintTop_toBottomOf="@id/brand_name">
-
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/email_et"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/text_input"
-                    android:hint="Email"
-                    android:inputType="textEmailAddress"
-                    android:textColor="@color/white"
-                    android:textColorHint="#6E7387"
-                    android:textStyle="bold" />
-            </com.google.android.material.textfield.TextInputLayout>
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -104,7 +79,7 @@
                 app:errorTextColor="@color/register"
                 app:hintAnimationEnabled="false"
                 app:hintEnabled="false"
-                app:layout_constraintTop_toBottomOf="@id/email">
+                app:layout_constraintTop_toBottomOf="@id/brand_name">
 
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -199,41 +174,19 @@
             </com.google.android.material.textfield.TextInputLayout>
 
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/sale"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="22dp"
-                android:layout_marginTop="22dp"
-                app:errorEnabled="true"
-                app:errorTextColor="@color/register"
-                app:hintAnimationEnabled="false"
-                app:hintEnabled="false"
-                app:layout_constraintTop_toBottomOf="@id/location">
-
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/sales_et"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/text_input"
-                    android:hint="What You sale"
-                    android:textColor="@color/white"
-                    android:textColorHint="#6E7387"
-                    android:textStyle="bold" />
-            </com.google.android.material.textfield.TextInputLayout>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/submit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/sale"
+                app:layout_constraintTop_toBottomOf="@id/location"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/test"
                 android:layout_marginHorizontal="22dp"
                 android:text="Summit"
                 android:textSize="24sp"
+                android:elevation="21dp"
+                android:textAllCaps="false"
                 android:fontFamily="@font/okay"
                 android:textColor="@color/white"
                 android:textStyle="bold"/>

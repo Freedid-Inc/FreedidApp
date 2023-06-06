@@ -7,10 +7,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import com.example.freedidapp.data.FreedidCatalog
 import com.example.freedidapp.databinding.FragmentCatalogBinding
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.textfield.TextInputEditText
 
 
-class Catalog : DialogFragment() {
+class Catalog : BottomSheetDialogFragment() {
     private var _binding: FragmentCatalogBinding? = null
     private val binding get() = _binding!!
     private lateinit var listener : DialogNextBtnClickListener

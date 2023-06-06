@@ -30,9 +30,12 @@ class Shield : Fragment() {
 
         val sharedPreferences = activity?.getSharedPreferences("freedid", Context.MODE_PRIVATE)
         val businessName = sharedPreferences?.getString("BUSINESSNAME", "").toString()
-
-
         binding.businessName.text = businessName
+
+        binding.saveCash.setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_shield_to_saveCash2)
+
+        }
 
 
         return view

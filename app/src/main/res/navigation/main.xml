@@ -55,4 +55,9 @@
         android:name="com.example.freedidapp.BusinessProfile"
         android:label="fragment_business_profile"
         tools:layout="@layout/fragment_business_profile" />
+    <fragment
+        android:id="@+id/welcomeMessage"
+        android:name="com.example.freedidapp.WelcomeMessage"
+        android:label="fragment_welcome_message"
+        tools:layout="@layout/fragment_welcome_message" />
 </navigation>

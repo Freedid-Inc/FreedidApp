@@ -37,6 +37,11 @@
             app:exitAnim="@android:anim/slide_out_right"
             app:popUpTo="@id/shield"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_shield_to_saveCash2"
+            app:destination="@id/saveCash2"
+            app:enterAnim="@android:anim/slide_out_right"
+            app:exitAnim="@android:anim/slide_in_left" />
     </fragment>
     <fragment
         android:id="@+id/users"
@@ -72,4 +77,27 @@
         android:name="com.example.freedidapp.Settings"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/saveCash2"
+        android:name="com.example.freedidapp.SaveCash"
+        android:label="fragment_save_cash"
+        tools:layout="@layout/fragment_save_cash" >
+        <action
+            android:id="@+id/action_saveCash2_to_shield"
+            app:destination="@id/shield"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_saveCash2_to_paymneyOption"
+            app:destination="@id/paymneyOption" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymneyOption"
+        android:name="com.example.freedidapp.PaymneyOption"
+        android:label="fragment_paymney_option"
+        tools:layout="@layout/fragment_paymney_option" >
+        <action
+            android:id="@+id/action_paymneyOption_to_saveCash2"
+            app:destination="@id/saveCash2" />
+    </fragment>
 </navigation>

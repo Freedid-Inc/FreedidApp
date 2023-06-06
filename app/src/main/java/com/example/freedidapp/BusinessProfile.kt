@@ -48,20 +48,13 @@ class BusinessProfile : Fragment() {
                     .show()
                 binding.about.requestFocus()
             }
-            if (!Patterns.EMAIL_ADDRESS.matcher(binding.emailEt.text.toString()).matches()) {
-                Toast.makeText(requireContext(), "Input Your Email", Toast.LENGTH_SHORT).show()
-                binding.email.requestFocus()
-            }
             if (!Patterns.PHONE.matcher(binding.numberEt.text.toString()).matches()) {
                 Toast.makeText(requireContext(), "Input Your Phone Number", Toast.LENGTH_SHORT)
                     .show()
             }
             if (binding.locationEt.text.toString().isEmpty()) {
                 Toast.makeText(requireContext(), "Input Your Location", Toast.LENGTH_SHORT).show()
-            }
-            if (binding.salesEt.text.toString().isEmpty()) {
-                Toast.makeText(requireContext(), "Input What you sale", Toast.LENGTH_SHORT).show()
-            } else {
+            }else {
 
                 val sharedPreferences =
                     activity?.getSharedPreferences("freedid", Context.MODE_PRIVATE)
@@ -70,8 +63,7 @@ class BusinessProfile : Fragment() {
                 editor?.putString("BUSINESSLOCATION", binding.locationEt.text.toString())
                 editor?.putString("BUSINESSINFO", binding.aboutEt.text.toString())
                 editor?.putString("BUSINESSNUMBER", binding.numberEt.text.toString())
-                editor?.putString("BUSINESSSales", binding.salesEt.text.toString())
-                editor?.putString("BUSINESSEmail", binding.emailEt.text.toString())
+
                 editor?.putString("BUSINESSTYPE", binding.categoryEt.text.toString())
                 editor?.apply()
 
@@ -80,16 +72,12 @@ class BusinessProfile : Fragment() {
                 val businessNumber = binding.numberEt.text.toString()
                 val businessInfo = binding.aboutEt.text.toString()
                 val businessLocation = binding.locationEt.text.toString()
-                val businessHour = binding.emailEt.text.toString()
-                val businessDelivery = binding.salesEt.text.toString()
 
                 val users = FreedidUsers(
                     businessName,
-                    businessHour,
                     businessNumber,
                     businessInfo,
                     businessLocation,
-                    businessDelivery
                 )
 
                 if (uid != null) {

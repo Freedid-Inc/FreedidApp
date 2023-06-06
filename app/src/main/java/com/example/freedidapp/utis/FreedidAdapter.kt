@@ -28,6 +28,7 @@ private var listener : FreedidAdapterClick? = null
                 binding.productNameDb.text = this.users.productName
                 binding.shippingPriceDb.text = this.users.shoppingPrice
                 binding.productPriceDb.text = this.users.price
+                binding.productDescriptionDb.text = this.userId
 
 
 

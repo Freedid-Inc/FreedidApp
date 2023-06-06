@@ -43,7 +43,7 @@ class SplashScreen : Fragment() {
                 Navigation.findNavController(view).navigate(R.id.action_splashScreen_to_login)
             }
 
-        }, 7000)
+        }, 3000)
 
 
         return view
