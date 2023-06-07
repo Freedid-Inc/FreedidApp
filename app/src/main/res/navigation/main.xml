@@ -54,10 +54,19 @@
         android:id="@+id/businessProfile"
         android:name="com.example.freedidapp.BusinessProfile"
         android:label="fragment_business_profile"
-        tools:layout="@layout/fragment_business_profile" />
+        tools:layout="@layout/fragment_business_profile" >
+        <action
+            android:id="@+id/action_businessProfile_to_fragmentBusinessLoggo"
+            app:destination="@id/fragmentBusinessLoggo" />
+    </fragment>
     <fragment
         android:id="@+id/welcomeMessage"
         android:name="com.example.freedidapp.WelcomeMessage"
         android:label="fragment_welcome_message"
         tools:layout="@layout/fragment_welcome_message" />
+    <fragment
+        android:id="@+id/fragmentBusinessLoggo"
+        android:name="com.example.freedidapp.FragmentBusinessLoggo"
+        android:label="fragment_business_loggo"
+        tools:layout="@layout/fragment_business_loggo" />
 </navigation>
