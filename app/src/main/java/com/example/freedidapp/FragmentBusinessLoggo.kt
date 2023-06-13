@@ -1,5 +1,6 @@
 package com.example.freedidapp
 
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,16 +10,15 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import com.example.freedidapp.databinding.FragmentBusinessLoggoBinding
-import com.example.freedidapp.utis.DataImage
+import com.example.freedidapp.data.DataImage
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
-import kotlinx.coroutines.internal.artificialFrame
-import java.net.URI
-import java.net.URL
 
 
 class FragmentBusinessLoggo : Fragment() {
@@ -39,7 +39,7 @@ class FragmentBusinessLoggo : Fragment() {
         storageReference = FirebaseStorage.getInstance().getReference("images")
         auth = FirebaseAuth.getInstance()
 
-        val uid = databaseReference.push().key!!
+        val uid = Firebase.auth.currentUser?.uid.toString()
 
         _binding = FragmentBusinessLoggoBinding.inflate(inflater, container, false)
         val view = binding.root
@@ -71,7 +71,8 @@ class FragmentBusinessLoggo : Fragment() {
                                 var imageURL = url.toString()
 
                                 val data = DataImage(imageURL)
-
+                                val intent = Intent(requireContext(), ActivityHolder::class.java)
+                                activity?.startActivity(intent)
                                 databaseReference.child(uid).setValue(data)
                                     .addOnCompleteListener {
                                         if (it.isSuccessful) {
