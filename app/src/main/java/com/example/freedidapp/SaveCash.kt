@@ -1,5 +1,6 @@
 package com.example.freedidapp
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -24,7 +25,26 @@ class SaveCash : Fragment() {
 
 
         binding.proceed.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_saveCash2_to_paymneyOption)
+
+            if (binding.amountEt.text.toString().isEmpty()) {
+                binding.amount.error = "This Field is Required"
+            } else {
+                val sharedPreferences =
+                    activity?.getSharedPreferences(
+                        "FreedidSave",
+                        Context.MODE_PRIVATE
+                    )
+                val editor = sharedPreferences?.edit()
+                editor?.putString(
+                    "AmountSaved",
+                    binding.amountEt.text.toString()
+                )
+                editor?.apply()
+                Navigation.findNavController(view).navigate(R.id.action_saveCash2_to_paymneyOption)
+
+            }
+
+
         }
 
 

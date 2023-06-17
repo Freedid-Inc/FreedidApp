@@ -64,66 +64,67 @@ class BusinessProfile : Fragment() {
                 Toast.makeText(requireContext(), "Input Your Location", Toast.LENGTH_SHORT).show()
             } else {
 
-                                    val sharedPreferences =
-                                        activity?.getSharedPreferences(
-                                            "freedid",
-                                            Context.MODE_PRIVATE
-                                        )
-                                    val editor = sharedPreferences?.edit()
-                                    editor?.putString(
-                                        "BUSINESSNAME",
-                                        binding.brandNameEt.text.toString()
-                                    )
-                                    editor?.putString(
-                                        "BUSINESSLOCATION",
-                                        binding.locationEt.text.toString()
-                                    )
-                                    editor?.putString(
-                                        "BUSINESSINFO",
-                                        binding.aboutEt.text.toString()
-                                    )
-                                    editor?.putString(
-                                        "BUSINESSNUMBER",
-                                        binding.numberEt.text.toString()
-                                    )
+                val sharedPreferences =
+                    activity?.getSharedPreferences(
+                        "freedid",
+                        Context.MODE_PRIVATE
+                    )
+                val editor = sharedPreferences?.edit()
+                editor?.putString(
+                    "BUSINESSNAME",
+                    binding.brandNameEt.text.toString()
+                )
+                editor?.putString(
+                    "BUSINESSLOCATION",
+                    binding.locationEt.text.toString()
+                )
+                editor?.putString(
+                    "BUSINESSINFO",
+                    binding.aboutEt.text.toString()
+                )
+                editor?.putString(
+                    "BUSINESSNUMBER",
+                    binding.numberEt.text.toString()
+                )
 
-                                    editor?.putString(
-                                        "BUSINESSTYPE",
-                                        binding.categoryEt.text.toString()
-                                    )
-                                    editor?.apply()
-
-
-                                    val businessName = binding.brandNameEt.text.toString()
-                                    val businessNumber = binding.numberEt.text.toString()
-                                    val businessInfo = binding.aboutEt.text.toString()
-                                    val businessLocation = binding.locationEt.text.toString()
+                editor?.putString(
+                    "BUSINESSTYPE",
+                    binding.categoryEt.text.toString()
+                )
+                editor?.apply()
 
 
-                                    val users: FreedidUsers = FreedidUsers(
-                                        businessName,
-                                        businessNumber,
-                                        businessInfo,
-                                        businessLocation,
-
-                                    )
-
-                                    databaseReference.child(uid).setValue(users)
-                                        .addOnCompleteListener {
-                                            if (it.isSuccessful) {
-                                                showSnackbar("Business Account Created Successfully")
-                                               Navigation.findNavController(view).navigate(R.id.action_businessProfile_to_fragmentBusinessLoggo)
-                                            }
-                                        }.addOnFailureListener {
-
-                                            showSnackbar("Cant Create Your Business Account")
-
-                                        }
+                val businessName = binding.brandNameEt.text.toString()
+                val businessNumber = binding.numberEt.text.toString()
+                val businessInfo = binding.aboutEt.text.toString()
+                val businessLocation = binding.locationEt.text.toString()
 
 
-                                }
+                val users: FreedidUsers = FreedidUsers(
+                    businessName,
+                    businessNumber,
+                    businessInfo,
+                    businessLocation,
 
+                    )
+
+                databaseReference.child(uid).setValue(users)
+                    .addOnCompleteListener {
+                        if (it.isSuccessful) {
+                            showSnackbar("Business Account Created Successfully")
+                            Navigation.findNavController(view)
+                                .navigate(R.id.action_businessProfile_to_fragmentBusinessLoggo)
                         }
+                    }.addOnFailureListener {
+
+                        showSnackbar("Cant Create Your Business Account")
+
+                    }
+
+
+            }
+
+        }
 
 
 

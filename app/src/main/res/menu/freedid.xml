@@ -5,7 +5,7 @@
 
     <item
         android:id="@+id/home2"
-        android:icon="@drawable/person_home"
+        android:icon="@drawable/kilode"
         android:title="" />
 
 
@@ -16,7 +16,7 @@
 
 
     <item
-        android:id="@+id/shield"
+        android:id="@+id/tabLayout"
         android:icon="@drawable/ic_outline_shield_24"
         android:title="" />
 

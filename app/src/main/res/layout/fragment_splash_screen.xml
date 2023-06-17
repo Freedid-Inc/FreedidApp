@@ -4,18 +4,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:background="@color/black"
+    android:layout_height="match_parent"
     tools:context=".SplashScreen">
 
     <!-- TODO: Update blank fragment layout -->
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/main_bg"
+        android:layout_width="134dp"
+        android:layout_height="134dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/ellipselock"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
+
+    <ImageView
+        android:layout_width="126dp"
+        android:layout_height="115dp"
+        android:src="@drawable/transparent_loggo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.485" />
 </androidx.constraintlayout.widget.ConstraintLayout>

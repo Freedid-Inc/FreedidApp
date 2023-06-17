@@ -3,6 +3,7 @@ package com.example.freedidapp.utis
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.freedidapp.data.ToolData
 import com.example.freedidapp.databinding.UserPresentationBinding
 
 class FreedidAdapter(private val list: MutableList<ToolData>) :

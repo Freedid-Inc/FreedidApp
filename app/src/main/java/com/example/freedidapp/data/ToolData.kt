@@ -1,4 +1,4 @@
-package com.example.freedidapp.utis
+package com.example.freedidapp.data
 
 import com.example.freedidapp.data.FreedidCatalog
 

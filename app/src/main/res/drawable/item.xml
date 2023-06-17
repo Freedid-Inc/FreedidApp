@@ -3,7 +3,7 @@
 
     <item
         android:state_selected="true"
-        android:color="@color/register"/>
+        android:color="@color/issues"/>
 
     <item
         android:state_selected="false"

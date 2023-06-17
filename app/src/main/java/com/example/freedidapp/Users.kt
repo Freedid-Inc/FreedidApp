@@ -7,22 +7,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.freedidapp.data.CatalogPhoto
-import com.example.freedidapp.data.DataImage
 import com.example.freedidapp.data.FreedidCatalog
-import com.example.freedidapp.data.FreedidUsers
 import com.example.freedidapp.databinding.FragmentUsersBinding
-import com.example.freedidapp.utis.FreedidAdapter
 import com.example.freedidapp.utis.MyAdapter
-import com.example.freedidapp.utis.ToolData
-import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
-import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 
@@ -54,7 +46,7 @@ class Users : Fragment() {
         val view = binding.root
 
         binding.addCatalog.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_users_to_catalog)
+            Navigation.findNavController(view).navigate(R.id.action_tabLayout_to_catalog)
         }
 
         val sharedPreferences = activity?.getSharedPreferences("freedid", Context.MODE_PRIVATE)

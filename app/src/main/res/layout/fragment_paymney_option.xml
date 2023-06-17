@@ -84,11 +84,11 @@
                         android:id="@+id/cv_et"
                         android:layout_width="120dp"
                         android:layout_height="49dp"
-                        android:hint="MM/YY/DD"
+                        android:hint="MM/YY"
                         android:inputType="number"
-                        android:background="@color/okb"
-                        android:textColor="@color/white"
-                        android:textColorHint="@color/black" />
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textColorHint="#716666" />
                 </com.google.android.material.textfield.TextInputLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -129,7 +129,7 @@
                         android:layout_height="49dp"
                         android:hint="*****"
                         android:textColorHint="@color/black"
-                        android:background="@color/okb"
+                        android:background="@drawable/sorry"
                         android:inputType="number"
                         android:textColor="@color/white"/>
                 </com.google.android.material.textfield.TextInputLayout>
@@ -175,7 +175,7 @@
                         android:layout_height="49dp"
                         android:hint="*****"
                         android:textColorHint="@color/black"
-                        android:background="@color/okb"
+                        android:background="@drawable/sorry"
                         android:inputType="number"
                         android:textColor="@color/white"/>
                 </com.google.android.material.textfield.TextInputLayout>

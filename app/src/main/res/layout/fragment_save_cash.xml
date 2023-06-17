@@ -1,120 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:scrollbars="none"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
-
-
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
-    tools:context=".SaveCash">
+    android:fillViewport="true"
+    android:scrollbars="none">
 
-    <ImageView
-        android:id="@+id/back_arrow"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="12dp"
-        android:padding="10dp"
-        android:src="@drawable/ic_outline_arrow_back_ios_new_24"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        tools:context=".SaveCash">
 
-        <TextView
-            android:id="@+id/quick"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/spacegrotesk_variablefont_wght"
-            android:text="QUICK SAVE"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:textSize="32sp"
-            android:layout_marginStart="12dp"
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_outline_arrow_back_ios_new_24"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/statement"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:fontFamily="@font/spacegrotesk_medium"
-            android:text="Enter an amount and destination to save to\n Tap or enter...(e,g 200) "
-            android:textColor="@color/white"
-            app:layout_constraintStart_toStartOf="@id/quick"
-            app:layout_constraintTop_toBottomOf="@id/quick" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/amount"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/statement"
-            android:layout_marginTop="32dp"
-            app:hintAnimationEnabled="false"
-            app:hintEnabled="false"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_marginHorizontal="12dp">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
+            <TextView
+                android:id="@+id/quick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/spacegrotesk_variablefont_wght"
+                android:text="QUICK SAVE"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/amount_et"
+            <TextView
+                android:id="@+id/statement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/spacegrotesk_medium"
+                android:text="Enter an amount and destination to save to\n Tap or enter...(e,g 200) "
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@id/quick"
+                app:layout_constraintTop_toBottomOf="@id/quick" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/amount"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:background="@drawable/camon"
-                android:textColorHint="@color/white"
-                android:hint="Enter Amount" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="32dp"
+                app:errorEnabled="true"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false"
+                app:layout_constraintTop_toBottomOf="@id/statement">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/reasons"
-            android:layout_width="match_parent"
-            app:layout_constraintTop_toBottomOf="@id/amount"
-            android:layout_marginTop="32dp"
-            android:layout_marginHorizontal="12dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:hintEnabled="false"
-            app:hintAnimationEnabled="false"
-            android:layout_height="wrap_content">
 
-            <com.google.android.material.textfield.TextInputEditText
-               android:id="@+id/reasons_et"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/amount_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/camon"
+                    android:hint="Enter Amount"
+                    android:inputType="number"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/reasons"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/camon"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="32dp"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false"
+                app:layout_constraintTop_toBottomOf="@id/amount">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/reasons_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/camon"
+                    android:hint="Reasons for saving(not optional)"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/proceed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="19dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/test"
+                android:fontFamily="@font/spacegrotesk_variablefont_wght"
+                android:text="Proceed To Select Payment"
+                android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textColorHint="@color/white"
-                android:hint="Reasons for saving" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/proceed"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/test"
-            app:layout_constraintTop_toBottomOf="@id/reasons"
-            android:text="Proceed To Select Payment"
-            android:textColor="@color/white"
-            android:textAllCaps="false"
-            android:fontFamily="@font/spacegrotesk_variablefont_wght"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginTop="32dp"
-            android:layout_marginHorizontal="19dp"/>
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/reasons" />
 
 
-
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -100,4 +100,22 @@
             android:id="@+id/action_paymneyOption_to_saveCash2"
             app:destination="@id/saveCash2" />
     </fragment>
+    <fragment
+        android:id="@+id/tabLayout"
+        android:name="com.example.freedidapp.TabLayout"
+        android:label="fragment_tab_layout"
+        tools:layout="@layout/fragment_tab_layout" >
+        <action
+            android:id="@+id/action_tabLayout_to_catalog"
+            app:destination="@id/catalog" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoUpload"
+        android:name="com.example.freedidapp.VideoUpload"
+        android:label="fragment_video_upload"
+        tools:layout="@layout/fragment_video_upload" >
+        <action
+            android:id="@+id/action_videoUpload_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
 </navigation>
